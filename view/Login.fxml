@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <VBox alignment="TOP_CENTER" style="-fx-background-color: #0b6693;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="100.0" prefHeight="100.0" spacing="30.0">
+               <children>
+                  <ImageView fitHeight="81.0" fitWidth="80.0">
+                     <image>
+                        <Image url="@../resources/1467727677_2.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Eras Demi ITC" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="220.0" prefWidth="700.0" style="-fx-background-color: #cceeff;">
+               <children>
+                  <Pane prefHeight="212.0" prefWidth="209.0">
+                     <padding>
+                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/coloured.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <VBox prefHeight="200.0" prefWidth="500.0">
+                     <children>
+                        <FlowPane columnHalignment="RIGHT" hgap="30.0" prefHeight="121.0" prefWidth="538.0" vgap="20.0">
+                           <children>
+                              <Label text="Username:">
+                                 <font>
+                                    <Font name="Eras Demi ITC" size="24.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="userField" focusColor="#364d78" onKeyPressed="#loadIt" onKeyReleased="#loadIt" onKeyTyped="#loadIt" promptText="Username" unFocusColor="BLACK">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font></JFXTextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </FlowPane>
+                        <FlowPane columnHalignment="RIGHT" hgap="30.0" prefHeight="100.0" vgap="20.0">
+                           <children>
+                              <Label text="Password:">
+                                 <font>
+                                    <Font name="Eras Demi ITC" size="24.0" />
+                                 </font>
+                              </Label>
+                              <JFXPasswordField fx:id="passField" focusColor="#364d78" onKeyPressed="#loadIt" onKeyReleased="#loadIt" onKeyTyped="#loadIt" promptText="Password" unFocusColor="BLACK">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font></JFXPasswordField>
+                           </children>
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </FlowPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+               <children>
+                  <Hyperlink fx:id="newAccount" onAction="#createNew" text="Create New Account" textFill="WHITE">
+                     <font>
+                        <Font name="Eras Medium ITC" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <JFXButton fx:id="submitButton" buttonType="RAISED" disable="true" layoutX="524.0" layoutY="30.0" onAction="#submitHandle" ripplerFill="#0b6693" style="-fx-background-color: #eeeeee;" text="Submit" textAlignment="CENTER">
+                     <font>
+                        <Font name="Eras Demi ITC" size="30.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelButton" buttonType="RAISED" onAction="#cancelHandle" ripplerFill="#0b6693" style="-fx-background-color: #eeeeee;" text="Cancel" textAlignment="CENTER">
+                     <font>
+                        <Font name="Eras Demi ITC" size="30.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="50.0" top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

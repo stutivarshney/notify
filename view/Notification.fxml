@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="150.0" prefWidth="364.0" style="-fx-background-color: #220000;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Notification">
+   <children>
+      <Label fx:id="eventName" alignment="CENTER" text="Event Name" textFill="WHITE" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="Eras Demi ITC" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="104.0" prefWidth="360.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <Polygon fill="#ff3737" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <points>
+                <Double fx:value="30.0" />
+                <Double fx:value="0.0" />
+      		  
+                            <Double fx:value="0.0" />
+                <Double fx:value="107.0" />
+      		  
+                            <Double fx:value="300.0" />
+                <Double fx:value="107.0" />
+      		  
+                  		  <Double fx:value="300.0" />
+                <Double fx:value="0.0" />
+      		  
+                  		  
+              </points>
+            </Polygon>
+            <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/fgh1.jpg" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets left="10.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <VBox alignment="CENTER" layoutX="260.0" layoutY="-37.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.0">
+               <children>
+                  <JFXButton fx:id="dismissButton" buttonType="RAISED" onAction="#dismissAction" opacity="0.7" ripplerFill="#282525" style="-fx-background-color: #ffffff;" text="Dismiss" />
+                  <JFXButton fx:id="snoozeButton" buttonType="RAISED" layoutX="22.0" layoutY="51.0" onAction="#snoozeAction" opacity="0.7" ripplerFill="#282525" style="-fx-background-color: #ffffff;" text="Snooze" />
+               </children>
+            </VBox>
+            <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="eventDetails" contentDisplay="CENTER" prefWidth="160.0" text="Event type and details" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Eras Medium ITC" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

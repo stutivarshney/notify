@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditAccountController">
+   <children>
+      <Polygon fill="DODGERBLUE" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: #4e6ea3;">
+        <points>
+          <Double fx:value="0.0" />
+          <Double fx:value="0.0" />
+		  
+          <Double fx:value="0.0" />
+          <Double fx:value="320.0" />
+		  
+          <Double fx:value="300.0" />
+          <Double fx:value="320.0" />
+		  
+		  <Double fx:value="240.0" />
+          <Double fx:value="0.0" />
+		  
+		  
+        </points>
+      </Polygon>
+      <VBox alignment="CENTER" layoutX="248.0" layoutY="81.0" prefHeight="309.0" prefWidth="250.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="81.0" />
+      <VBox alignment="CENTER_LEFT" layoutY="74.0" prefHeight="319.0" prefWidth="220.0" style="-: #4e6ea3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="79.0" />
+      <VBox layoutX="127.0" prefHeight="80.0" prefWidth="381.0">
+         <children>
+            <Polygon fill="DODGERBLUE" rotate="90.0" scaleX="0.5" scaleY="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: #4e6ea3;">
+              <points>
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
+              </points>
+               <VBox.margin>
+                  <Insets left="-5.0" top="-10.0" />
+               </VBox.margin>
+            </Polygon>
+            <Label alignment="CENTER" minWidth="-Infinity" prefHeight="51.0" prefWidth="250.0" text="Modify Account" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="70.0" right="100.0" top="-75.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Comic Sans MS" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="28.0" layoutY="86.0" prefHeight="34.0" prefWidth="127.0" text="User name" textAlignment="RIGHT" />
+      <Label layoutX="29.0" layoutY="122.0" prefHeight="34.0" prefWidth="127.0" text="First name" />
+      <Label layoutX="29.0" layoutY="157.0" prefHeight="34.0" prefWidth="127.0" text="Last name" />
+      <Label layoutX="28.0" layoutY="234.0" prefHeight="34.0" prefWidth="127.0" text="New password" />
+      <Label layoutX="28.0" layoutY="268.0" prefHeight="34.0" prefWidth="127.0" text="Confirm password" />
+      <JFXButton fx:id="confirmButton" buttonType="RAISED" layoutX="92.0" layoutY="332.0" onAction="#confirmAction" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Confirm" textFill="#ebe4e4" />
+      <Label layoutX="28.0" layoutY="200.0" prefHeight="34.0" prefWidth="127.0" text="Change password" />
+      <JFXTextField fx:id="firstNameTextField" layoutX="288.0" layoutY="124.0">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <effect>
+            <Glow />
+         </effect>
+      </JFXTextField>
+      <JFXTextField fx:id="lastNameTextField" layoutX="288.0" layoutY="159.0">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField fx:id="userNameTextField" editable="false" layoutX="288.0" layoutY="88.0">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <effect>
+            <Bloom />
+         </effect>
+      </JFXTextField>
+      <JFXButton fx:id="cancelButton" buttonType="RAISED" layoutX="325.0" layoutY="332.0" onAction="#cancelAction" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Cancel" textFill="#d3dcdd" />
+      <JFXToggleButton fx:id="passwordToggle" layoutX="324.0" layoutY="193.0" onMouseClicked="#toggleAction" text=" " toggleColor="#ee0202">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </JFXToggleButton>
+      <JFXPasswordField fx:id="passwordTextField" layoutX="305.0" layoutY="225.0" maxWidth="178.0" minWidth="178.0" onKeyPressed="#handlingKeys" onKeyReleased="#handlingKeys" onKeyTyped="#handlingKeys" prefHeight="37.0" prefWidth="178.0" />
+      <ImageView fitHeight="69.0" fitWidth="80.0" layoutX="40.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/fgh1.jpg" />
+         </image>
+      </ImageView>
+      <JFXPasswordField fx:id="cpTextField" layoutX="305.0" layoutY="265.0" maxWidth="178.0" minWidth="178.0" onKeyPressed="#handlingKeys" onKeyReleased="#handlingKeys" onKeyTyped="#handlingKeys" prefHeight="37.0" prefWidth="178.0" />
+      <Line endX="100.0" layoutX="-414.0" layoutY="-152.0" startX="-100.0" />
+   </children>
+</AnchorPane>
